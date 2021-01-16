@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+pandas
+tensorflow
+transformers
+
+python-multipart
+pytest
+requests
