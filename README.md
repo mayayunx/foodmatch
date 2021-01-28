@@ -62,3 +62,7 @@
 
 - User rating of score 0 to asian fusion restaurant
 <img src="https://github.com/mayayunx/foodmatch/blob/main/Example/asian%20fusion%200.png" width="512">
+---
+### Remark
+- For AWS free tier's EC2 instance, the default memory for the score prediction model is definitely not enough. One can use swap files technique to add more by trading off some disk space
+- Training of two models with huge yelp dataset take time, however, even with few epochs, the results are already acceptable
