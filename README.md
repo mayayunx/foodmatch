@@ -37,4 +37,7 @@
 - Build the model! And test!
 
 ### Example Results
+- Ask recommendation for a sushi restaurant
 <img src="https://github.com/mayayunx/foodmatch/blob/main/Example/sushi%20no.png" width="512">
+- Ask recommendation for a sushi restaurant
+<img src="https://github.com/mayayunx/foodmatch/blob/main/Example/pizza%20no.png" width="256">
