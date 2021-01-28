@@ -7,9 +7,9 @@
 
 ### How to Use Docker to Deploy Sentiment Analysis Model
 - Have docker installed on target computer
-- Start docker service by 'sudo systemctl start docker' and 'sudo service docker start' (omit quotes, same for commands below)
+- Start docker service by ```sudo systemctl start docker``` and ```sudo service docker start``` (omit quotes, same for commands below)
 - In docker_foodmatch, build docker image and upload it if necessary
-- For example, run 'docker build --file Dockerfile --tag foodmatch .'
+- For example, run ```docker build --file Dockerfile --tag foodmatch .```
 - Start docker image, note that if the system does not have enough memory, it'll get stuck at allocation of memory exceeding limit
 - Command like 'docker run -p 8000:8000 foodmatch'
 - One can add swap file on Linux system manually, reference: [Adding swap file](https://docs.alfresco.com/3.4/tasks/swap-space-lin.html)
