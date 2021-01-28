@@ -1,11 +1,11 @@
 # TUM WS20/21 Applied Deep Learning NLP Seminar
 ## Team of Food Match Repository
 
-### How to use the notebook
+### How to Use The Notebook
 - Follow instructions in the notebook
 - Note that the res.json for lambda function is joined manually, the value of type attribute should use all lowercase letter in order to be matched sucessfully
 
-### How to use docker to deploy sentiment analysis model
+### How to Use Docker to Deploy Sentiment Analysis Model
 - Have docker installed on target computer
 - In docker_foodmatch, build docker image and upload it if necessary
 - For example, run docker build --file Dockerfile --tag foodmatch .
@@ -14,7 +14,7 @@
 - One can add swap file on Linux system manually, reference: https://docs.alfresco.com/3.4/tasks/swap-space-lin.html 
 - Prepare curl commands for testing, example: curl -X POST "http://localhost:8000/predict" -H "accept: application/json" -H "Contenication/json" -d "{\"data\":\"This Restaurant is bad\"}"
 
-### How to use lambda function
+### How to Use Lambda Function
 - Have Python 3.7 and pip installed
 - In lambda foodmatch, use pip to download ask-sdk package in the directory
 - Command like pip install ask-sdk -t .
@@ -27,7 +27,7 @@
 - Compress all files, this part we should have 44 items
 - Upload it to lambda function panel on AWS, choose runtime of Python 3.7
 
-### Alexa developer console setup
+### Alexa Developer Console Setup
 - Set the endpoint to AWS lambda function, also add trigger of Alexa skill in lambda
 - Create intents, including
 - GiveReviewIntent, sample utterances like "no", "no I haven't been there" or anything similar
@@ -35,3 +35,6 @@
 - CaptureFoodTypeIntent, sample utterances should have {foodtype}, add one intent slot foodtype of type AMAZON.Food, also turn on "Is this slot required to fulfill the intent?", speech prompt like "I want to eat Japanese today, and you?"
 - Next, under "Slot Types" panel, add slot value for food type, all should be in lowercase letter
 - Build the model! And test!
+
+### Example Results
+<img src="https://github.com/mayayunx/foodmatch/blob/main/Example/sushi%20no.png" width="512">
