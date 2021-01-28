@@ -39,5 +39,15 @@
 ### Example Results
 - Ask recommendation for a sushi restaurant
 <img src="https://github.com/mayayunx/foodmatch/blob/main/Example/sushi%20no.png" width="512">
+
 - Ask recommendation for a sushi restaurant
-<img src="https://github.com/mayayunx/foodmatch/blob/main/Example/pizza%20no.png" width="256">
+<img src="https://github.com/mayayunx/foodmatch/blob/main/Example/pizza%20no.png" width="512">
+
+- User rating of score 5 to burger restaurant
+<img src="https://github.com/mayayunx/foodmatch/blob/main/Example/burger%205.png" width="512">
+
+- User rating of score 3 to korean restaurant
+<img src="https://github.com/mayayunx/foodmatch/blob/main/Example/korean%203.png" width="512">
+
+- User rating of score 0 to asian fusion restaurant
+<img src="https://github.com/mayayunx/foodmatch/blob/main/Example/asian%20fusion%200.png" width="512">
