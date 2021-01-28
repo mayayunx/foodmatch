@@ -41,7 +41,7 @@
 ### Alexa Developer Console Setup
 - Set the endpoint to AWS lambda function, also add trigger of Alexa skill in lambda
 - Create intents, including
-- ```GiveReviewIntent```, sample utterances like ```no```, ```no I haven't been there" or anything similar```
+- ```GiveReviewIntent```, sample utterances like ```no```, ```no I haven't been there``` or anything similar
 - ```CaptureReviewIntent```, sample utterances like ```yes {review}```, ```I think {review}``` or anything include ```{review}``` in between, add one intent slot review, slot type of ```AMAZON.SearchQuery```, speech prompt ```What is your review for the restaurant?``` and turn on ```Is this slot required to fulfill the intent?```
 - ```CaptureFoodTypeIntent```, sample utterances should have ```{foodtype}```, add one intent slot foodtype of type ```AMAZON.Food```, also turn on ```Is this slot required to fulfill the intent?```, speech prompt like ```I want to eat Japanese today, and you?```
 - Next, under ```Slot Types``` panel, add slot value for food type, all should be in lowercase letter
