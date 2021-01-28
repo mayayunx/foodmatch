@@ -12,7 +12,7 @@
 - For example, run 'docker build --file Dockerfile --tag foodmatch .'
 - Start docker image, note that if the system does not have enough memory, it'll get stuck at allocation of memory exceeding limit
 - Command like 'docker run -p 8000:8000 foodmatch'
-- One can add swap file on Linux system manually, reference: https://docs.alfresco.com/3.4/tasks/swap-space-lin.html 
+- One can add swap file on Linux system manually, reference: [https://docs.alfresco.com/3.4/tasks/swap-space-lin.html]
 - Prepare curl commands for testing, example: curl -X POST "http://localhost:8000/predict" -H "accept: application/json" -H "Contenication/json" -d "{\"data\":\"This Restaurant is bad\"}"
 
 ### How to Use Lambda Function
