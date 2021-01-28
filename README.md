@@ -3,7 +3,7 @@
 
 ### How to use the notebook
 - Follow instructions in the notebook
-- Note that the res.json for lambda function is joined manually, the value of type attribute should use all lowercase letter to be matched sucessfully
+- Note that the res.json for lambda function is joined manually, the value of type attribute should use all lowercase letter in order to be matched sucessfully
 
 ### How to use docker to deploy sentiment analysis model
 - Have docker installed on target computer
@@ -18,8 +18,8 @@
 - Additionally, if you're on Linux system, directly install numpy and pandas package; otherwise, one needs to download the Linux distribution of two libraries from
 - https://files.pythonhosted.org/packages/b1/e1/8c4c5632adaffc18dba4e03e97458dc1cb00583811e6982fc620b9d88515/numpy-1.19.5-cp37-cp37m-manylinux1_x86_64.whl
 - https://files.pythonhosted.org/packages/7a/c2/339e302d4122cb8b166aecc823afed4af6b2193f040f2656eea77d174146/pandas-1.2.1-cp37-cp37m-manylinux1_x86_64.whl
-- Also pip install pytz as well
-- Unpack them and paste in lambda function folder
+- - Unpack them and paste in lambda function folder
+- Also pip install pytz
 - Change line 113's IP address accordingly if you want to use score prediction part
 - Compress all files, this part we should have 44 items
 - Upload it to lambda function panel on AWS, choose runtime of Python 3.7
