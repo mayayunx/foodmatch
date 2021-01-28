@@ -3,8 +3,9 @@
 
 ### Introduction
 - This is a project of developing an Alexa skill of
-- - Recommending restaurants based on input food type (e.g., Japanese, Chinese, Vegetarian) with machine generated comments for recommendation
-- - Predicting and rating user's review automatically online
+-- Recommending restaurants based on input food type (e.g., Japanese, Chinese, Vegetarian) with machine generated comments for recommendation
+-- Predicting and rating user's review automatically online
+
 ---
 ### How to Use The Notebook
 - Follow instructions in the notebook
