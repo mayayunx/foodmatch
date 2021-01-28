@@ -5,6 +5,15 @@
 * This is a project of developing an Alexa skill of
     * Recommending restaurants based on input food type (e.g., Japanese, Chinese, Vegetarian) with machine generated comments for recommendation
     * Predicting and rating user's review automatically online
+---
+### System Architecture
+- First train different models for text generation of food types, and generate some comment to create ```res.json``` for lambda function to use
+- Train a live sentiment analysis model and combine it to use with docker
+- Build a docker image, install required libraries, push it to AWS
+- Create lambda function and compress it with essential packages, upload it to AWS lambda function console
+- Create Alexa skill and configure content
+- Start an instance on EC2, install docker and pull back the image, run it as a backend
+- If user gives review, store it in ```tmp``` folder in lambda function, then upload it to Simple Storage Service (S3)
 
 ---
 ### How to Use The Notebook
@@ -68,3 +77,4 @@
 ### Remark
 - For AWS free tier's EC2 instance, the default memory for the score prediction model is definitely not enough. One can use swap files technique to add more by trading off some disk space
 - Training of two models with huge yelp dataset take time, however, even with few epochs, the results are already acceptable
+- Lambda function environment is a read-only file system, so it's not able to write files on it. One can use ```tmp``` folder in lambda function to write files temporarily, the content is not guaranteed to be stored for long time and could disapper in any minute. As our project use, one can uplolad it to S3, or send it to backend server for proper saving
