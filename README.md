@@ -45,7 +45,7 @@
 - [Pandas v1.2.1 Python 3.7 Linux Distribution](https://files.pythonhosted.org/packages/7a/c2/339e302d4122cb8b166aecc823afed4af6b2193f040f2656eea77d174146/pandas-1.2.1-cp37-cp37m-manylinux1_x86_64.whl)
 - Unpack and paste them in lambda function folder
 - Also do ```pip install pytz -t .```
-- Change lambda function file line 113's IP address accordingly if you want to use score prediction part
+- Change lambda function file line 114's IP address accordingly if you want to use score prediction part
 - Compress all files, this part the zip file should contain 44 items
 - Upload it to lambda function panel on AWS, choose runtime of Python 3.7
 ---
