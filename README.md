@@ -81,4 +81,4 @@
 - Lambda function environment is a read-only file system, so it's not able to write files on it. One can use ```tmp``` folder in lambda function to write files temporarily, the content is not guaranteed to be stored for long time and could disapper in any minute. As our project use, one can uplolad it to S3, or send it to backend server for proper saving
 - In order to use S3 normally, first create an access point for the lambda function in S3 webpage, add the ARN id of lambda function
 - In IAM management console, add new policies: ```AmazonS3FullAccess```, ```AWSLambdaExecute``` and attach this role to lambda function
-- In ```res.json```, do not type any comments; make sure the text is regular, do not comprise multiple punctuations e.g. ```...```, ```!!!```, this will make Alexa unable to process and throw an error
+- In ```res.json```, do not type any comments; make sure the text is regular, do not comprise multiple punctuations e.g. ```...```, ```!!!```, this will make Alexa unable to process it and throws an error
