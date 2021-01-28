@@ -6,12 +6,10 @@
 - Recommending restaurants based on input food type (e.g., Japanese, Chinese, Vegetarian) with machine generated comments for recommendation
 - Predicting and rating user's review automatically online
 ---
-
 ### How to Use The Notebook
 - Follow instructions in the notebook
 - Note that the res.json for lambda function is joined manually, the value of type attribute should use all lowercase letter in order to be matched sucessfully
 ---
-
 ### How to Use Docker to Deploy Sentiment Analysis Model
 - Due to large size of the score prediction model, one can download it via [text_classification_modelv3](https://drive.google.com/drive/folders/1MFmLfYniSQcMo9CN4RL1JrHWl3dS80WB?usp=sharing).
 - Then place the whole folder under api/ml/text_classification_modelv3
@@ -24,7 +22,7 @@
 - Run with ```docker run -p 8000:8000 foodmatch```
 - One can add swap file on Linux system manually, reference: [Adding swap space in Linux](https://docs.alfresco.com/3.4/tasks/swap-space-lin.html)
 - Prepare curl commands for testing, example: ```curl -X POST "http://localhost:8000/predict" -H "accept: application/json" -H "Contenication/json" -d "{\"data\":\"This Restaurant is bad\"}"```
-
+---
 ### How to Use Lambda Function
 - Have Python 3.7 and pip installed
 - In lambda_foodmatch, use pip to download ask-sdk package in the directory by```pip install ask-sdk -t .```
@@ -39,7 +37,7 @@
 - Change line 113's IP address accordingly if you want to use score prediction part
 - Compress all files, this part the zip file should contain 44 items
 - Upload it to lambda function panel on AWS, choose runtime of Python 3.7
-
+---
 ### Alexa Developer Console Setup
 - Set the endpoint to AWS lambda function, also add trigger of Alexa skill in lambda
 - Create intents, including
@@ -48,7 +46,7 @@
 - ```CaptureFoodTypeIntent```, sample utterances should have ```{foodtype}```, add one intent slot foodtype of type ```AMAZON.Food```, also turn on ```Is this slot required to fulfill the intent?```, speech prompt like ```I want to eat Japanese today, and you?```
 - Next, under ```Slot Types``` panel, add slot value for food type, all should be in lowercase letter
 - Build the model! And test!
-
+---
 ### Example Results
 - Ask recommendation for a sushi restaurant
 <img src="https://github.com/mayayunx/foodmatch/blob/main/Example/sushi%20no.png" width="512">
