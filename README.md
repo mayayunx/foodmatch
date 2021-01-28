@@ -25,7 +25,7 @@
 - [NumPy v1.19.5 Python 3.7 Linux Distribution](https://files.pythonhosted.org/packages/b1/e1/8c4c5632adaffc18dba4e03e97458dc1cb00583811e6982fc620b9d88515/numpy-1.19.5-cp37-cp37m-manylinux1_x86_64.whl)
 - [Pandas v1.2.1 Python 3.7 Linux Distribution](https://files.pythonhosted.org/packages/7a/c2/339e302d4122cb8b166aecc823afed4af6b2193f040f2656eea77d174146/pandas-1.2.1-cp37-cp37m-manylinux1_x86_64.whl)
 - Unpack and paste them in lambda function folder
-- Also do 'pip install pytz -t .'
+- Also do ```pip install pytz -t .```
 - Change line 113's IP address accordingly if you want to use score prediction part
 - Compress all files, this part the zip file should contain 44 items
 - Upload it to lambda function panel on AWS, choose runtime of Python 3.7
@@ -33,10 +33,10 @@
 ### Alexa Developer Console Setup
 - Set the endpoint to AWS lambda function, also add trigger of Alexa skill in lambda
 - Create intents, including
-- GiveReviewIntent, sample utterances like "no", "no I haven't been there" or anything similar
-- CaptureReviewIntent, sample utterances like "yes {review}", "I think {review}" or anything include {review} in between, add one intent slot review, slot type of AMAZON.SearchQuery, speech prompt "What is your review for the restaurant?" and turn on "Is this slot required to fulfill the intent?"
-- CaptureFoodTypeIntent, sample utterances should have {foodtype}, add one intent slot foodtype of type AMAZON.Food, also turn on "Is this slot required to fulfill the intent?", speech prompt like "I want to eat Japanese today, and you?"
-- Next, under "Slot Types" panel, add slot value for food type, all should be in lowercase letter
+- ```GiveReviewIntent```, sample utterances like ```no```, ```no I haven't been there" or anything similar```
+- ```CaptureReviewIntent```, sample utterances like ```yes {review}```, ```I think {review}``` or anything include ```{review}``` in between, add one intent slot review, slot type of ```AMAZON.SearchQuery```, speech prompt ```What is your review for the restaurant?``` and turn on ```Is this slot required to fulfill the intent?```
+- ```CaptureFoodTypeIntent```, sample utterances should have ```{foodtype}```, add one intent slot foodtype of type ```AMAZON.Food```, also turn on ```Is this slot required to fulfill the intent?```, speech prompt like ```I want to eat Japanese today, and you?```
+- Next, under ```Slot Types``` panel, add slot value for food type, all should be in lowercase letter
 - Build the model! And test!
 
 ### Example Results
