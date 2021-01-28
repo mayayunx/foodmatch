@@ -7,14 +7,15 @@
     * Predicting and rating user's review automatically online
 ---
 ### System Architecture
-- First train different models for text generation of food types, and generate some comment to create ```res.json``` for lambda function to use
+- Download Yelp dataset, do some pre-processing to parse out useful data
+- Train different models for text generation of food types, and generate some comment to create ```res.json``` for lambda function to use
+- Use NLPRule to check and correct possible grammatical errors for the comments
 - Train a live sentiment analysis model and combine it to use with docker
 - Build a docker image, install required libraries, push it to AWS
 - Create lambda function and compress it with essential packages, upload it to AWS lambda function console
-- Create Alexa skill and configure content
+- Establish the Alexa skill and configure content
 - Start an instance on EC2, install docker and pull back the image, run it as a backend
 - If user gives review, store it in ```tmp``` folder in lambda function, then upload it to Simple Storage Service (S3)
-
 ---
 ### How to Use The Notebook
 - Follow instructions in the notebook
