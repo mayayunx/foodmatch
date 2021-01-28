@@ -7,22 +7,23 @@
 
 ### How to Use Docker to Deploy Sentiment Analysis Model
 - Have docker installed on target computer
+- Start docker service by 'sudo systemctl start docker' and 'sudo service docker start' (omit quotes, same for commands below)
 - In docker_foodmatch, build docker image and upload it if necessary
-- For example, run docker build --file Dockerfile --tag foodmatch .
+- For example, run 'docker build --file Dockerfile --tag foodmatch .'
 - Start docker image, note that if the system does not have enough memory, it'll get stuck at allocation of memory exceeding limit
-- Command like docker run -p 8000:8000 foodmatch
+- Command like 'docker run -p 8000:8000 foodmatch'
 - One can add swap file on Linux system manually, reference: https://docs.alfresco.com/3.4/tasks/swap-space-lin.html 
 - Prepare curl commands for testing, example: curl -X POST "http://localhost:8000/predict" -H "accept: application/json" -H "Contenication/json" -d "{\"data\":\"This Restaurant is bad\"}"
 
 ### How to Use Lambda Function
 - Have Python 3.7 and pip installed
 - In lambda foodmatch, use pip to download ask-sdk package in the directory
-- Command like pip install ask-sdk -t .
+- Command like 'pip install ask-sdk -t .'
 - Additionally, if you're on Linux system, directly install numpy and pandas package; otherwise, one needs to download the Linux distribution of two libraries from
 - https://files.pythonhosted.org/packages/b1/e1/8c4c5632adaffc18dba4e03e97458dc1cb00583811e6982fc620b9d88515/numpy-1.19.5-cp37-cp37m-manylinux1_x86_64.whl
 - https://files.pythonhosted.org/packages/7a/c2/339e302d4122cb8b166aecc823afed4af6b2193f040f2656eea77d174146/pandas-1.2.1-cp37-cp37m-manylinux1_x86_64.whl
 - - Unpack them and paste in lambda function folder
-- Also do pip install pytz -t .
+- Also do 'pip install pytz -t .'
 - Change line 113's IP address accordingly if you want to use score prediction part
 - Compress all files, this part we should have 44 items
 - Upload it to lambda function panel on AWS, choose runtime of Python 3.7
