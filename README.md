@@ -11,15 +11,17 @@
 - In docker_foodmatch, build docker image and upload it if necessary
 - For example, run ```docker build --file Dockerfile --tag foodmatch .```
 - Start docker image, note that if the system does not have enough memory, it'll get stuck at allocation of memory exceeding limit
-- Command like 'docker run -p 8000:8000 foodmatch'
+- Run with ```docker run -p 8000:8000 foodmatch```
 - One can add swap file on Linux system manually, reference: [Adding swap file](https://docs.alfresco.com/3.4/tasks/swap-space-lin.html)
-- Prepare curl commands for testing, example: curl -X POST "http://localhost:8000/predict" -H "accept: application/json" -H "Contenication/json" -d "{\"data\":\"This Restaurant is bad\"}"
+- Prepare curl commands for testing, example: ```curl -X POST "http://localhost:8000/predict" -H "accept: application/json" -H "Contenication/json" -d "{\"data\":\"This Restaurant is bad\"}"```
 
 ### How to Use Lambda Function
 - Have Python 3.7 and pip installed
-- In lambda foodmatch, use pip to download ask-sdk package in the directory
-- Command like 'pip install ask-sdk -t .'
-- Additionally, if you're on Linux system, directly install numpy and pandas package; otherwise, one needs to download the Linux distribution of two libraries from
+- In lambda_foodmatch, use pip to download ask-sdk package in the directory by```pip install ask-sdk -t .```
+- Additionally, if you're on Linux system, directly install numpy and pandas package
+- ```pip install numpy -t .```
+- ```pip install pandas -t .```
+- Otherwise, one needs to download the Linux distribution of two libraries from
 - [NumPy v1.19.5 Python 3.7 Linux Distribution](https://files.pythonhosted.org/packages/b1/e1/8c4c5632adaffc18dba4e03e97458dc1cb00583811e6982fc620b9d88515/numpy-1.19.5-cp37-cp37m-manylinux1_x86_64.whl)
 - [Pandas v1.2.1 Python 3.7 Linux Distribution](https://files.pythonhosted.org/packages/7a/c2/339e302d4122cb8b166aecc823afed4af6b2193f040f2656eea77d174146/pandas-1.2.1-cp37-cp37m-manylinux1_x86_64.whl)
 - Unpack and paste them in lambda function folder
