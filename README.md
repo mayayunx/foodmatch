@@ -5,10 +5,12 @@
 - This is a project of developing an Alexa skill of
 - Recommending restaurants based on input food type (e.g., Japanese, Chinese, Vegetarian) with machine generated comments for recommendation
 - Predicting and rating user's review automatically online
+---
 
 ### How to Use The Notebook
 - Follow instructions in the notebook
 - Note that the res.json for lambda function is joined manually, the value of type attribute should use all lowercase letter in order to be matched sucessfully
+---
 
 ### How to Use Docker to Deploy Sentiment Analysis Model
 - Due to large size of the score prediction model, one can download it via [text_classification_modelv3](https://drive.google.com/drive/folders/1MFmLfYniSQcMo9CN4RL1JrHWl3dS80WB?usp=sharing).
