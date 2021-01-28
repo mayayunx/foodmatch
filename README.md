@@ -19,12 +19,12 @@
 ---
 ### How to Use The Notebook
 - Follow instructions in the notebook
-- Note that the res.json for lambda function is joined manually, the value of type attribute should use all lowercase letter in order to be matched sucessfully
+- Note that the ```res.json``` for lambda function is joined manually, the value of type attribute should use all lowercase letter in order to be matched sucessfully
 ---
 ### How to Use Docker to Deploy Sentiment Analysis Model
 - Due to large size of the score prediction model, one can download it via [text_classification_modelv3](https://drive.google.com/drive/folders/1MFmLfYniSQcMo9CN4RL1JrHWl3dS80WB?usp=sharing).
-- Then place the whole folder under api/ml/text_classification_modelv3
-- Inside 'text_classification_modelv3' folder, it should have: config.json, tf_model.h5
+- Then place the whole folder under ```api/ml/text_classification_modelv3```
+- Inside ```text_classification_modelv3``` folder, it should have: ```config.json```, ```tf_model.h5```
 - Have docker installed on target computer
 - Start docker service by ```sudo systemctl start docker``` and ```sudo service docker start``` (omit quotes, same for commands below)
 - In docker_foodmatch, build docker image and upload it if necessary
