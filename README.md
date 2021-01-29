@@ -15,7 +15,7 @@
 - Create lambda function and compress it with essential packages, upload it to AWS lambda function console
 - Establish the Alexa skill and configure content
 - Start an instance on EC2, install docker and pull back the image, run it as a backend
-- If user gives review, store it in ```tmp``` folder in lambda function, then upload it to Simple Storage Service (S3)
+- If user gives a review, store it at ```tmp``` folder in lambda function, then upload it to Simple Storage Service (S3)
 ---
 ### How to Use The Notebook
 - Follow instructions in the notebook
