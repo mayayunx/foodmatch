@@ -1,4 +1,4 @@
-# TUM WS20/21 Applied Deep Learning NLP Seminar
+# TUM WS20/21 Applied Deep Learning for NLP Seminar
 ## Team of Food Match Repository
 
 ### Introduction
