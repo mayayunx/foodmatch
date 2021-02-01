@@ -36,8 +36,8 @@
 ---
 ### How to Use Lambda Function
 - Have Python 3.7 and pip installed
-- In lambda_foodmatch, use pip to download ask-sdk package in the directory by```pip install ask-sdk -t .```
-- Additionally, if you're on Linux system, directly install numpy and pandas package
+- In lambda_foodmatch, use pip to download ask-sdk package in the directory by ```pip install ask-sdk -t .```
+- Additionally, if you're on Linux system (macOS is not compatible), directly install numpy and pandas package
 - ```pip install numpy -t .```
 - ```pip install pandas -t .```
 - Otherwise, one needs to download the Linux distribution of two libraries from
@@ -61,7 +61,7 @@
    * ```CaptureReviewIntent```, sample utterances like ```yes {review}```, ```I think {review}``` or anything include ```{review}``` in between, add one intent slot review, slot type of ```AMAZON.SearchQuery```, speech prompt ```What is your review for the restaurant?``` and turn on ```Is this slot required to fulfill the intent?```
    * ```CaptureFoodTypeIntent```, sample utterances should have ```{foodtype}```, add one intent slot foodtype of type ```AMAZON.Food```, also turn on ```Is this slot required to fulfill the intent?```, speech prompt like ```I want to eat Japanese today, and you?```
    * Next, under ```Slot Types``` panel, add slot value for food type, all should be in lowercase letter
-- Fianlly, build the model! And test!
+- Fianlly, build the model and test!
 ---
 ### Example Results
 - Ask recommendation for a sushi restaurant
