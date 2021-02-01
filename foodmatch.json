@@ -1,0 +1,184 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "food match",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CaptureFoodTypeIntent",
+                    "slots": [
+                        {
+                            "name": "foodtype",
+                            "type": "AMAZON.Food"
+                        }
+                    ],
+                    "samples": [
+                        "I want {foodtype}",
+                        "I would like to eat {foodtype}",
+                        "I would like to have {foodtype}",
+                        "I want to have {foodtype}",
+                        " I want to eat {foodtype}",
+                        "{foodtype}"
+                    ]
+                },
+                {
+                    "name": "CaptureReviewIntent",
+                    "slots": [
+                        {
+                            "name": "review",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "yes {review}",
+                        "My review for the restaurant is {review}",
+                        "I think {review}",
+                        "My review is {review}"
+                    ]
+                },
+                {
+                    "name": "GiveReviewIntent",
+                    "slots": [],
+                    "samples": [
+                        "No never been there",
+                        "No I haven't been there",
+                        "No"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "AMAZON.Food",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "burger",
+                                "synonyms": [
+                                    "Burger"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "vegetarian",
+                                "synonyms": [
+                                    "Vegetarian",
+                                    "Vegan",
+                                    "Salad",
+                                    "salad",
+                                    "vegan"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "chinese",
+                                "synonyms": [
+                                    "Korean",
+                                    "Asian Fusion",
+                                    "Thai",
+                                    "Chinese",
+                                    "thai",
+                                    "asian fusion",
+                                    "korean"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pizza",
+                                "synonyms": [
+                                    "Italian",
+                                    "Pizza",
+                                    "italian"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sushi",
+                                "synonyms": [
+                                    "Japanese",
+                                    "Sushi",
+                                    "japanese"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "CaptureFoodTypeIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "foodtype",
+                            "type": "AMAZON.Food",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1508889458207.1602944452715"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CaptureReviewIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "review",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1216223839347.1261544180320"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1508889458207.1602944452715",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I want to eat Japanese today, and you?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1216223839347.1261544180320",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is your review for the restaurant?"
+                    }
+                ]
+            }
+        ]
+    }
+}
