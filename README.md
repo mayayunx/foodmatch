@@ -50,11 +50,12 @@
 - Upload it to lambda function panel on AWS, choose runtime of Python 3.7
 ---
 ### Alexa Developer Console Setup
-- Set the endpoint to AWS lambda function, also add trigger of Alexa skill in lambda
+- First create a new skill, choose ```Custom Model``` and ```Alexa-Hosted(Python)``` (which will be changed later), use ```Start from Scratch``` template
+- In ```Endpoint```, set the AWS lambda ARN to the ARN id of lambda function from above, also add a trigger of Alexa skill in lambda function with the skill ID
 - There are two ways to create the Alexa skill:
-* Automatically
+* Automatically by uploading
    * Download the ```foodmatch.json``` file and upload it to ```Interaction Model->JSON Editor```, click ```Save Model```.
-* Manually
+* Manually by creating
    * Create intents, including
    * ```GiveReviewIntent```, sample utterances like ```no```, ```no I haven't been there``` or anything similar
    * ```CaptureReviewIntent```, sample utterances like ```yes {review}```, ```I think {review}``` or anything include ```{review}``` in between, add one intent slot review, slot type of ```AMAZON.SearchQuery```, speech prompt ```What is your review for the restaurant?``` and turn on ```Is this slot required to fulfill the intent?```
