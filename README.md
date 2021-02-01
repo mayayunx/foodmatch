@@ -51,12 +51,16 @@
 ---
 ### Alexa Developer Console Setup
 - Set the endpoint to AWS lambda function, also add trigger of Alexa skill in lambda
-- Create intents, including
-- ```GiveReviewIntent```, sample utterances like ```no```, ```no I haven't been there``` or anything similar
-- ```CaptureReviewIntent```, sample utterances like ```yes {review}```, ```I think {review}``` or anything include ```{review}``` in between, add one intent slot review, slot type of ```AMAZON.SearchQuery```, speech prompt ```What is your review for the restaurant?``` and turn on ```Is this slot required to fulfill the intent?```
-- ```CaptureFoodTypeIntent```, sample utterances should have ```{foodtype}```, add one intent slot foodtype of type ```AMAZON.Food```, also turn on ```Is this slot required to fulfill the intent?```, speech prompt like ```I want to eat Japanese today, and you?```
-- Next, under ```Slot Types``` panel, add slot value for food type, all should be in lowercase letter
-- Build the model! And test!
+- There are two ways to create the Alexa skill:
+* Automatically
+   * Download the ```foodmatch.json``` file and upload it to ```Interaction Model->JSON Editor```, click ```Save Model```.
+* Manually
+   * Create intents, including
+   * ```GiveReviewIntent```, sample utterances like ```no```, ```no I haven't been there``` or anything similar
+   * ```CaptureReviewIntent```, sample utterances like ```yes {review}```, ```I think {review}``` or anything include ```{review}``` in between, add one intent slot review, slot type of ```AMAZON.SearchQuery```, speech prompt ```What is your review for the restaurant?``` and turn on ```Is this slot required to fulfill the intent?```
+   * ```CaptureFoodTypeIntent```, sample utterances should have ```{foodtype}```, add one intent slot foodtype of type ```AMAZON.Food```, also turn on ```Is this slot required to fulfill the intent?```, speech prompt like ```I want to eat Japanese today, and you?```
+   * Next, under ```Slot Types``` panel, add slot value for food type, all should be in lowercase letter
+- Fianlly, build the model! And test!
 ---
 ### Example Results
 - Ask recommendation for a sushi restaurant
@@ -79,6 +83,6 @@
 - For AWS free tier's EC2 instance, the default memory for the score prediction model is definitely not enough. One can use swap files technique to add more by trading off some disk space
 - Training of two models with huge yelp dataset take time, however, even with few epochs, the results are already acceptable
 - Lambda function environment is a read-only file system, so it's not able to write files on it. One can use ```tmp``` folder in lambda function to write files temporarily, the content is not guaranteed to be stored for long time and could disapper in any minute. As our project use, one can uplolad it to S3, or send it to backend server for proper saving
-- In order to use S3 normally, first create an access point for the lambda function in S3 webpage, add the ARN id of lambda function
+- In order to use S3 upload functionality normally, first create an access point for the lambda function in S3 webpage, then add the ARN id of lambda function
 - In IAM management console, add new policies: ```AmazonS3FullAccess```, ```AWSLambdaExecute``` and attach this role to lambda function
 - In ```res.json```, do not type any comments; make sure the text is regular, do not comprise multiple punctuations e.g. ```...```, ```!!!```, this will make Alexa unable to process the sentence and throws an error
